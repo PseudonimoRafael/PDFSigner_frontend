@@ -11,7 +11,7 @@ function Login() {
   }
   return (
     <>
-      <div className="credencial">
+      <div className="auth-card">
         <form onSubmit={handleSubmit} className="form">
         <h1>Entre em sua conta</h1>
           <div>
@@ -29,7 +29,7 @@ function Login() {
             palceholder="Digite a senha"/> 
           </div>  
           <div>
-            <button type="submit">Logar</button>
+            <button type="submit" className="btn">Logar</button>
           </div>  
         </form>
       </div>

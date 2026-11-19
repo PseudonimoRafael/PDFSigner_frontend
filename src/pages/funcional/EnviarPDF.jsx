@@ -79,6 +79,7 @@ function EnviarPDF({ onFileSelect }) {
             >
             Remover
             </button>
+            <button type="button">Enviar</button>
             </div>
         )}
 

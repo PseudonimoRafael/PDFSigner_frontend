@@ -3,8 +3,9 @@ import { useState, useRef } from "react";
 function Centralizador({children, hg=400, wh=400}) {
   return (
     <>
+    <div className="centralizado">
       <div
-      className="centralizado"
+      className="conteudo"
       style={{
         height:hg,
         width:wh,
@@ -12,6 +13,7 @@ function Centralizador({children, hg=400, wh=400}) {
       >
         {children}
       </div>
+    </div>
     </>
   )
 }

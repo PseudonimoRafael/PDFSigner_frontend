@@ -7,7 +7,6 @@ function AssinarPDF(params) {
       <h1> Assainar PDF </h1>
       <h2> selecione o arquivo para assinar </h2>
       <EnviarPDF/>
-      <button type="button">Enviar</button>
     </div>
     <div>
       <h1>Não possui uma conta?</h1>

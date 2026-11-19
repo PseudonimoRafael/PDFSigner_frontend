@@ -11,7 +11,7 @@ function Registrar() {
   }
   return (
     <>
-      <div className="credencial">
+      <div>
         <form onSubmit={handleSubmit} className="form">
         <h1>Crie uma conta</h1>
           <div>
@@ -36,7 +36,7 @@ function Registrar() {
             palceholder="Confirme a senha"/> 
           </div>  
           <div>
-            <button type="submit">Registrar</button>
+            <button type="submit" className="btn">Registrar</button>
           </div>  
         </form>
       </div>
