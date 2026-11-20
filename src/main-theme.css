@@ -327,13 +327,14 @@ form > div,
 
 .centralizado {
     position: fixed;
-    inset: 0;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    z-index: 9999;
 
     padding: 20px;
 }
@@ -601,4 +602,48 @@ li {
     input[type="reset"] {
         width: 100%;
     }
+}
+
+/* Container das abas */
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #d1d5db;
+}
+
+/* Botões não selecionados */
+.tabs button {
+    border: 1px solid #d1d5db;
+    border-bottom: none;
+
+    background-color: #e5e7eb;
+    color: #374151;
+
+    padding: 10px 20px;
+    width: 25%;
+    border-radius: 0;
+
+    cursor: pointer;
+
+    transition: background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Hover */
+.tabs button:hover {
+    background-color: #d1d5db;
+}
+
+/* Botão selecionado */
+.tabs button.active {
+    background-color: var(--mint-primary-hover);
+    color: white;
+    color: var(--text);
+
+}
+
+/* Hover da aba selecionada */
+.tabs button.active:hover {
+    background-color: var(--mint-primary-dark);
 }

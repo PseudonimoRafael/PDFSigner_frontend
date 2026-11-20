@@ -3,12 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 
 // falta fazer uma faxina nesses arquivos.
-import ModeloPagina from './pages/ModeloPagina'
 import Registrar from './pages/auth/Registrar'
-import AssinarPDF from './pages/funcional/AssinarPDF'
+import TelaPrincipal from './pages/funcional/TelaPrincipal'
 import Login from './pages/auth/Login'
-import IconeLogado from './pages/componentes/IconeLogado'
-import Centralizador from "./pages/componentes/Centralizador.jsx"
+import Centralizador from "./components/Centralizador"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,13 +16,12 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/login" element={ <Centralizador><Login/></Centralizador>}/>
-            <Route path="/register" element={ <Centralizador><Registrar/></Centralizador>}/>
-            <Route path="/" element={ <Centralizador wh="600px" hg="600px"><AssinarPDF/></Centralizador>}/>
+            <Route path="/register" element={ <Centralizador hg="600px"><Registrar/></Centralizador>}/>
+              <Route path="/" element={<TelaPrincipal/>}/>
           </Routes>
       </BrowserRouter>
     </>
   )
 }
 
-// <IconeLogado nome="max" foto=""/>
 export default App;

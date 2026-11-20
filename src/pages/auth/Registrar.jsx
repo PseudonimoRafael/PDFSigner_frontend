@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router"
   
 function Registrar() {
   const [nome, setNome] = useState("")  
+  const [email, setEmail] = useState("")  
   const [senha, setSenha] = useState("")
   const [confSenha, setConfSenha] = useState("") 
 //  const [boolSenha, setBoolSenha] = useState(false) 
   
+  const navigate = useNavigate() 
   function handleSubmit() {
     console.log("Happe!")
   }
@@ -21,6 +24,13 @@ function Registrar() {
             onChange={(e) => setNome(e.target.value)}
             palceholder="Digite seu nome"/> 
           </div>  
+          <div>
+            <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            palceholder="Digite seu nome"/> 
+          </div> 
           <div>
             <input
             type="password"
@@ -39,6 +49,10 @@ function Registrar() {
             <button type="submit" className="btn">Registrar</button>
           </div>  
         </form>
+        <div>
+          <p>Já possui conta?</p>
+          <button type="button" onClick={() => navigate("/login")}>Log In</button>
+        </div>
       </div>
     </>
   )

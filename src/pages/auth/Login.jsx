@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router"
 
 function Login() {
   const [nome, setNome] = useState("")  
@@ -6,12 +7,13 @@ function Login() {
   const [confSenha, setConfSenha] = useState("") 
 //  const [boolSenha, setBoolSenha] = useState(false) 
   
+  const navigate = useNavigate() 
   function handleSubmit() {
     console.log("Happe!")
   }
   return (
     <>
-      <div className="auth-card">
+      <div>
         <form onSubmit={handleSubmit} className="form">
         <h1>Entre em sua conta</h1>
           <div>
@@ -20,7 +22,7 @@ function Login() {
             value={nome}
             onChange={(e) => setNome(e.target.value)}
             palceholder="Digite seu nome"/> 
-          </div>  
+          </div> 
           <div>
             <input
             type="password"
@@ -29,9 +31,13 @@ function Login() {
             palceholder="Digite a senha"/> 
           </div>  
           <div>
-            <button type="submit" className="btn">Logar</button>
+            <button type="submit" className="button">Logar</button>
           </div>  
         </form>
+        <div>
+          <p>Não possui conta?</p>
+          <button type="button" onClick={() => navigate("/register")}>Registrar</button>
+        </div>
       </div>
     </>
   )
