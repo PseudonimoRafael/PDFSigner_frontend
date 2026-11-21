@@ -19,7 +19,7 @@ function Tabs({children}) {
           </button>
         ))}
       </div>
-      <div className="conteudo">
+      <div>
         {abas[ActiveTab]}
       </div>
     </>
